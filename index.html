@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="hdv_cont">
+        <div class="menu-iconos">
+            <a href="#info" class="icono activo" title="Información Personal"><i
+                    class="fa-solid fa-circle-info"></i></a>
+            <a href="#perfil" class="icono"><i class="fa-solid fa-user"></i></a>
+            <a href="#area" class="icono" title="Área de Desempeño"><i class="fa-solid fa-gears"></i></a>
+            <a href="#habilidades" class="icono" title="Habilidades"><i class="fa-solid fa-lightbulb"></i></a>
+            <a href="#experiencia" class="icono" title="Experiencia Laboral"><i class="fa-solid fa-briefcase"></i></a>
+            <a href="#estudios" class="icono" title="Estudios"><i class="fa-solid fa-graduation-cap"></i></a>
+            <a id="descargarPDF" class="icono" title="Descargar PDF"> <i class="fa-solid fa-file-pdf"></i> </a>
+        </div>
+        <div class="nombre_foto" id="info">
+            <span>
+                <h2>MOISES DAVID CALVO ARIAS</h2>
+                <p>Técnico en Sistemas Informáticos</p>
+                <table>
+                    <tr>
+                        <th>Celular:</th>
+                        <td style="user-select: all;">(+57) 3243858904</td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td style="user-select: all;">moisesmclegit@gmail.com - mdcaar0628@outlook.com</td>
+                    </tr>
+                    <tr>
+                        <th>Ubicación:</th>
+                        <td>Soledad, Atlántico</td>
+                    </tr>
+                </table>
+            </span>
+
+            <span>
+                <div class="img_foto"></div>
+            </span>
+        </div>
+
+        <div class="mi_perfil" id="perfil">
+            <h3>Mi Perfil</h3>
+            <p>
+                Profesional con habilidades para la operación de equipos y sistemas informáticos, así como para la
+                sistematización de procesos y procedimientos administrativos. Cuento con una amplia base de
+                conocimientos que
+                me permite adaptarme con facilidad a nuevas tecnologías e innovaciones del entorno laboral.
+                <br><br>
+                Soy una persona amable, responsable y organizada, con un alto compromiso hacia la calidad y la mejora
+                continua.
+                Poseo capacidad analítica para resolver problemas, tomar decisiones objetivas y liderar tareas cuando es
+                necesario. Me adapto con facilidad a los cambios tecnológicos y disfruto trabajar en equipo, manteniendo
+                una
+                actitud proactiva, creativa y tolerante ante la presión.
+            </p>
+        </div>
+
+        <div class="area-desempeno" id="area">
+            <h3>Área de Desemepeño</h3>
+            <div class="burbujas">
+                <span>👨‍💻 Análisis y desarrollo de sistemas informáticos</span>
+                <span>🧠 Programación y mantenimiento de software</span>
+                <span>🖥️ Instalación y configuración de equipos de cómputo</span>
+                <span>🧹 Mantenimiento preventivo y correctivo de hardware</span>
+                <span>📊 Transcripción y gestión digital de información</span>
+                <span>📱 Desarrollo y soporte de aplicaciones móviles</span>
+                <span>🌐 Administración básica de redes y servidores locales</span>
+                <span>🔒 Monitoreo y soporte de sistemas de seguridad (CCTV)</span>
+            </div>
+        </div>
+
+        <div class="habilidades" id="habilidades">
+            <div class="hab_per">
+                <h3>Habilidades Personales</h3>
+                <ul>
+                    <li>Amabilidad y respeto con los demás</li>
+                    <li>Análisis y solución efectiva de problemas</li>
+                    <li>Responsabilidad y cumplimiento</li>
+                    <li>Atención al detalle</li>
+                    <li>Decisiones bajo presión</li>
+                    <li>Compromiso con los resultados</li>
+                    <li>Creatividad e innovación</li>
+                    <li>Liderazgo y delegación responsable</li>
+                    <li>Dinamismo en el entorno laboral</li>
+                    <li>Objetividad y pensamiento crítico</li>
+                    <li>Organización del tiempo</li>
+                    <li>Puntualidad y confiabilidad</li>
+                    <li>Respeto y trabajo en equipo</li>
+                    <li>Tolerancia a la presión</li>
+                </ul>
+            </div>
+
+            <div class="hab_lab">
+                <h3>Habilidades Laborales</h3>
+                <ul>
+                    <li>Gestión del tiempo y prioridades</li>
+                    <li>Atención al cliente</li>
+                    <li>Autocontrol y adaptabilidad</li>
+                    <li>Proactividad y mejora continua</li>
+                    <li>Resolución de conflictos</li>
+                    <li>Comunicación clara</li>
+                    <li>Negociación y trabajo colaborativo</li>
+                    <li>Manejo de <b>Microsoft Office</b></li>
+                    <li>Uso de <b>Google Workspace</b></li>
+                    <li>Conocimientos en <b>HTML, CSS, JS y Bootstrap</b></li>
+                    <li>Análisis numérico básico</li>
+                    <li>Ética profesional</li>
+                    <li>Iniciativa y orientación al logro</li>
+                    <li>Compromiso y perseverancia</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="exp_laboral" id="experiencia">
+            <h3>Experiencias Laborales</h3>
+            <div class="tabla">
+                <div class="experiencia">
+                    <div class="info-laboral">
+                        <p><strong>Empresa:</strong> Jbm Grupo Empresarial S.A.S.</p>
+                        <p><strong>Cargo:</strong> Técnico en Sistemas Informáticos</p>
+                        <p><strong>Fechas:</strong> 01-Enero-2024 | 01-Abril-2024</p>
+                        <p><strong>Gerente:</strong> (+57) 3155289814</p>
+                    </div>
+
+                    <div class="funciones">
+                        <h4>Funciones Principales</h4>
+                        <ul>
+                            <li>Diseño y desarrollo de software empresarial.</li>
+                            <li>Mantenimiento preventivo y correctivo de equipos y red Ethernet.</li>
+                            <li>Administración de servidor local y sistema de cámaras de seguridad.</li>
+                            <li>Instalación, configuración y actualización de software empresarial, controladores y
+                                sistemas operativos.</li>
+                            <li>Soporte técnico remoto y presencial a usuarios internos.</li>
+                            <li>Gestión de bases de datos en Access, MySQL y Excel.</li>
+                            <li>Respaldo y documentación de información crítica y procesos técnicos.</li>
+                            <li>Redacción de informes técnicos y atención al cliente.</li>
+                            <li>Control de inventario de hardware y detección de vulnerabilidades básicas.</li>
+                            <li>Optimización de procesos, automatización de tareas y mejoras en la infraestructura
+                                tecnológica.</li>
+                            <li>Mantenimiento de la página web corporativa <a href="https://jbmgrupoempresarial.inmo.co"
+                                    target="_blank">jbmgrupoempresarial.inmo.co</a>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experiencia">
+                    <div class="info-laboral">
+                        <p><strong>Empresa:</strong> Jbm Grupo Empresarial S.A.S.</p>
+                        <p><strong>Cargo:</strong> Técnico en Sistemas Informáticos</p>
+                        <p><strong>Fechas:</strong> 01-Enero-2024 | 01-Abril-2024</p>
+                        <p><strong>Gerente:</strong> (+57) 3155289814</p>
+                    </div>
+
+                    <div class="funciones">
+                        <h4>Funciones Principales</h4>
+                        <ul>
+                            <li>Diseño y desarrollo de software empresarial.</li>
+                            <li>Mantenimiento preventivo y correctivo de equipos y red Ethernet.</li>
+                            <li>Administración de servidor local y sistema de cámaras de seguridad.</li>
+                            <li>Instalación, configuración y actualización de software empresarial, controladores y
+                                sistemas operativos.</li>
+                            <li>Soporte técnico remoto y presencial a usuarios internos.</li>
+                            <li>Gestión de bases de datos en Access, MySQL y Excel.</li>
+                            <li>Respaldo y documentación de información crítica y procesos técnicos.</li>
+                            <li>Redacción de informes técnicos y atención al cliente.</li>
+                            <li>Control de inventario de hardware y detección de vulnerabilidades básicas.</li>
+                            <li>Optimización de procesos, automatización de tareas y mejoras en la infraestructura
+                                tecnológica.</li>
+                            <li>Mantenimiento de la página web corporativa
+                                <a href="https://jbmgrupoempresarial.inmo.co" target="_blank">
+                                    jbmgrupoempresarial.inmo.co
+                                </a>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experiencia">
+                    <div class="info-laboral">
+                        <p><strong>Empresa:</strong> Armada Nacional de Colombia (Escuela Naval ARC Barranquilla)</p>
+                        <p><strong>Cargo:</strong> Infante de Marina Bachiller</p>
+                        <p><strong>Fechas:</strong> 30-Abril-2024 | 30-Abril-2025</p>
+                    </div>
+
+                    <div class="funciones">
+                        <h4>Funciones Principales</h4>
+                        <ul>
+                            <li>Prestación del servicio militar con responsabilidades técnicas adicionales debido a
+                                conocimientos en sistemas.</li>
+                            <li>Redacción y organización de documentos administrativos.</li>
+                            <li>Automatización de procesos con scripts en Windows.</li>
+                            <li>Atención al cliente y soporte técnico básico al personal militar.</li>
+                            <li>Mantenimiento del servidor Linux que almacena la base de datos de oficiales y
+                                suboficiales.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="estudios_certificaciones" id="estudios">
+            <h3>Estudios y Certificaciones</h3>
+
+            <div class="estudios">
+                <div class="estudio">
+                    <h4>11° de Bachillerato</h4>
+                    <p><strong>Institución:</strong> Centro Educativo San Juan Bosco - Soledad Atlántico.</p>
+                    <p><strong>Periodo:</strong> 03 de Febrero 2020 | 05 de Diciembre 2020</p>
+                </div>
+                <hr>
+                <div class="estudio">
+                    <h4>Técnico Laboral por Competencias en Soporte Técnico en Tecnologías de Programas Informáticos
+                    </h4>
+                    <p><strong>Institución:</strong> Centro Inca - Barranquilla Atlántico.</p>
+                    <p><strong>Periodo:</strong> 01 de Febrero 2021 | 23 de Diciembre 2022</p>
+                </div>
+            </div>
+            <hr>
+            <div class="certificaciones">
+                <h4>Certificaciones</h4>
+                <ul>
+                    <li>Certificación en Diseño, Liquidación y Pago de Nómina.</li>
+                    <li>Certificación en Asesoría al Consumidor Financiero.</li>
+                    <li>Certificación para Jefes de Área en Trabajo en Alturas.</li>
+                    <li>Certificación de Trabajador Autorizado para Trabajo en Alturas.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        document.getElementById("descargarPDF").addEventListener("click", () => {
+            const elemento = document.querySelector(".hdv_cont");
+            elemento.style.overflow = 'visible';
+            elemento.style.display = 'block';
+            const opciones = {
+                margin: 0.1,
+                filename: 'HOJA DE VIDA MOISES DAVID CALVO ARIAS.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 4 },
+                jsPDF: { unit: 'in', format: 'a2', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+            html2pdf().set(opciones).from(elemento).save();
+        });
+
+    </script>
+</body>
+</html>
