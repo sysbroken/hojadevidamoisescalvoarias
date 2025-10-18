@@ -485,6 +485,24 @@
             transform: translateX(3px);
         }
     </style>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
     <div class="hdv_cont">
         <div class="menu-iconos">
             <a href="#info" class="icono activo" title="Información Personal"><i
@@ -494,6 +512,7 @@
             <a href="#habilidades" class="icono" title="Habilidades"><i class="fa-solid fa-lightbulb"></i></a>
             <a href="#experiencia" class="icono" title="Experiencia Laboral"><i class="fa-solid fa-briefcase"></i></a>
             <a href="#estudios" class="icono" title="Estudios"><i class="fa-solid fa-graduation-cap"></i></a>
+            <a id="descargarPDF" class="icono" title="Descargar PDF"> <i class="fa-solid fa-file-pdf"></i> </a>
         </div>
         <div class="nombre_foto" id="info">
             <span>
@@ -599,8 +618,8 @@
                 <div class="experiencia">
                     <div class="info-laboral">
                         <p><strong>Empresa:</strong> Jbm Grupo Empresarial S.A.S.</p>
-                        <p><strong>Cargo:</strong> Técnico en Sistemas Informáticos</p>
-                        <p><strong>Fechas:</strong> 01-Enero-2024 | 01-Abril-2024</p>
+                        <p><strong>Cargo:</strong> Practicante Técnico en Sistemas Informáticos</p>
+                        <p><strong>Fechas:</strong> 28-Junio-2023 | 28-Diciembre-2023</p>
                         <p><strong>Gerente:</strong> (+57) 3155289814</p>
                     </div>
 
@@ -723,7 +742,7 @@
             };
             html2pdf().set(opciones).from(elemento).save();
         });
-
     </script>
 </body>
+
 </html>
