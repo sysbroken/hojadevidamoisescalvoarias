@@ -16,6 +16,475 @@
 </head>
 
 <body>
+        <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+        * {
+            padding: 0;
+            box-sizing: border-box;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            user-select: none;
+        }
+
+        body {
+            width: 100%;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h3 {
+            border-left: 3px solid red;
+            padding-left: 10px;
+        }
+
+        .hdv_cont {
+            max-width: 1080px;
+            position: relative;
+            height: auto;
+            overflow-y: auto;
+            padding: 20px 100px;
+            border-radius: 5px;
+            box-shadow: 0 1px 10px black;
+            margin: 0 auto;
+        }
+
+        .menu-iconos {
+            position: fixed;
+            top: 120px;
+            left: calc(50% - 540px + -80px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 10px;
+            border-radius: 15px;
+            width: 60px;
+            z-index: 9999999999;
+            transition: all 0.3s ease;
+        }
+
+        .icono {
+            background-color: #d62828;
+            color: white;
+            font-size: 22px;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .icono:hover {
+            background-color: #b81f1f;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .icono.activo {
+            background-color: #ff2e2e;
+            box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
+        }
+
+        @media (max-width: 1250px) {
+            .menu-iconos {
+                position: fixed;
+                bottom: 10px;
+                left: 0;
+                height: auto;
+                flex-direction: column;
+            }
+        }
+
+        @media print {
+            .hdv_cont {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: 0 !important;
+            }
+
+            .menu-iconos {
+                display: none !important;
+            }
+
+            .experiencia,
+            .mi_perfil,
+            .hab_per,
+            .hab_lab,
+            .estudios_certificaciones {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+        }
+
+        /* NOMBRE, TITULO y FOTO */
+        .nombre_foto {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            font-family: 'Poppins', sans-serif;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .nombre_foto h2 {
+            color: #d62828;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nombre_foto p {
+            font-size: 17px;
+            color: #444;
+            margin: 4px 0 15px;
+            font-weight: 500;
+        }
+
+        .nombre_foto table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .nombre_foto th {
+            text-align: left;
+            color: #d62828;
+            padding-right: 8px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .nombre_foto td {
+            color: #333;
+            font-size: 15px;
+        }
+
+        .img_foto {
+            width: 130px;
+            height: 130px;
+            background-image: url('/img/img_foto.jpeg');
+            /* cambia por tu imagen */
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            border: 4px solid #d62828;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .img_foto:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .nombre_foto {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nombre_foto table {
+                margin: 0 auto;
+            }
+
+            .img_foto {
+                margin-top: 10px;
+            }
+        }
+
+        /* MI PERFIL */
+        .mi_perfil {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 60px;
+            transition: all 0.3s ease;
+        }
+
+        .mi_perfil:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .mi_perfil h3 {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+
+        .mi_perfil p {
+            font-size: 15.5px;
+            text-align: justify;
+        }
+
+        .mi_perfil p::first-letter {
+            color: #d62828;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Area de desempeno */
+        .area-desempeno {
+            margin-bottom: 60px;
+
+        }
+
+        .area-desempeno h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .burbujas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .burbujas span {
+            background-color: #f0f6ff;
+            color: #0a3d91;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            font-weight: 500;
+            border: 1px solid #b3ceff;
+            transition: all 0.3s ease;
+        }
+
+        .burbujas span:hover {
+            background-color: #dbe9ff;
+            transform: scale(1.05);
+            cursor: default;
+        }
+
+        /* HABILIDADES */
+        .habilidades {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 60px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .habilidades h3 {
+            font-size: 22px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .hab_per,
+        .hab_lab {
+            flex: 1 1 48%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .hab_per:hover,
+        .hab_lab:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .hab_per ul,
+        .hab_lab ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .hab_per li,
+        .hab_lab li {
+            background: #f8f8f8;
+            border-left: 3px solid #d62828;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #333;
+            line-height: 1.4;
+            transition: all 0.2s ease;
+        }
+
+        .hab_per li:hover,
+        .hab_lab li:hover {
+            background-color: #d62828;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .hab_lab b {
+            color: #d62828;
+        }
+
+        @media (max-width: 768px) {
+            .habilidades {
+                flex-direction: column;
+            }
+
+            .hab_per,
+            .hab_lab {
+                flex: 1 1 100%;
+            }
+        }
+
+        /* EXPERIENCIA LABORAL */
+        .exp_laboral h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-block;
+            letter-spacing: 1px;
+        }
+
+        .experiencia {
+            padding: 22px;
+            border: 1px solid #e0e0e0;
+            border-left: 3px solid #d62828;
+            margin-bottom: 60px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .experiencia:hover {
+            box-shadow: 0 4px 15px rgba(214, 40, 40, 0.15);
+        }
+
+        .info-laboral p {
+            margin: 4px 0;
+            font-size: 0.95em;
+            color: #333;
+        }
+
+        .info-laboral strong {
+            color: #d62828;
+            font-weight: 600;
+        }
+
+        .funciones {
+            margin-top: 15px;
+        }
+
+        .funciones h4 {
+            font-size: 1.05em;
+            border-bottom: 2px solid #d62828;
+            display: inline-block;
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .funciones ul {
+            margin: 10px 0 0 18px;
+            padding: 0;
+        }
+
+        .funciones li {
+            margin-bottom: 6px;
+            line-height: 1.45;
+            font-size: 0.95em;
+            color: #333;
+            list-style-type: "• ";
+        }
+
+        .funciones li::marker {
+            color: #d62828;
+            font-size: 1.1em;
+        }
+
+        .funciones a {
+            color: #d62828;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .funciones a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estudios */
+        .estudios_certificaciones {
+            background: #fff;
+            border-radius: 15px;
+            margin-top: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .estudios_certificaciones h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .estudios h4,
+        .certificaciones h4 {
+            color: #d62828;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .estudios p {
+            color: #333;
+            margin: 0 0 8px 0;
+            font-size: 14.5px;
+        }
+
+        .certificaciones ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .certificaciones ul li {
+            background: #ffe5e5;
+            color: #333;
+            border-left: 2px solid #d62828;
+            margin-bottom: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14.5px;
+            transition: all 0.3s ease;
+        }
+
+        .certificaciones ul li:hover {
+            background: #ffd6d6;
+            transform: translateX(3px);
+        }
+    </style>
     <div class="hdv_cont">
         <div class="menu-iconos">
             <a href="#info" class="icono activo" title="Información Personal"><i
